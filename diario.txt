@@ -1,0 +1,4 @@
+14 Oct
+tienen el canvas del juego
+tiene 1 personaje en codigo....
+3/5 contribuciones en el proyecto
