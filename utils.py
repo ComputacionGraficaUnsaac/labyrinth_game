@@ -99,14 +99,14 @@ def Defender(x, y, r, g, b, size):
 			if matrix[i][j] == 2:
 				set_pixel(y - j, x - i,255/255, 192/255, 5/255, size)
 			#Color del arma
-			# if matrix[i][j] == 3:
-			# 	set_pixel(y - j, x - i,244, 244, 244, size)
+			if matrix[i][j] == 3:
+			 	set_pixel(y - j, x - i,244, 244, 244, size)
 			# # Color Armadura
-			# if matrix[i][j] == 4:
-			# 	set_pixel(y - j, x - i,10/255, 10/255 , 10/255, size)
+			if matrix[i][j] == 4:
+			 	set_pixel(y - j, x - i,10/255, 10/255 , 10/255, size)
 			# # color peto			
-			# if matrix[i][j] == 5:
-			# 	set_pixel(y - j, x - i,255/255, 255/255 , 0/255, size)
+			if matrix[i][j] == 5:
+			 	set_pixel(y - j, x - i,255/255, 255/255 , 0/255, size)
 
 def MoveDefender(x, y, sx, sy, r, g, b, size):
 	clearCanvas()
