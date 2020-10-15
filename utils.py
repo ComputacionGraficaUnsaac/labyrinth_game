@@ -113,7 +113,7 @@ def MoveDefender(x, y, sx, sy, r, g, b, size):
 	vertices = Traslate([[x, y, 1]], sx, sy)
 	x = vertices[0][0]
 	y = vertices[0][1]
-	Defender(y, -x, r, g, 1, size)
+	warrior_main(y, -x, r, g, 1, size)
 	pygame.display.flip()
 	return x, y
 
