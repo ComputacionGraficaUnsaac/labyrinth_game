@@ -2,4 +2,7 @@ Wed 14 oct
 Widmar: Agregue template de codigo
 Michael: se coloco el modulo del personaje principal  
 #se coordino acerca de las dimensiones y formas de los mapas 
-
+juev 15 oct 
+# Abraham: agrege shiny dark Personaje 
+# Ruben : agrege a la princesa personaje 
+estamos en coordinacion sobre la cantidad de mapas
