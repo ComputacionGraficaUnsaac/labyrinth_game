@@ -8,9 +8,6 @@
 
 from utils import *
 
-def princesa():
-	print("aqui estara el codigo de la princesa")
-
 def main():
 	scale = 1
 	width, height = 400, 400

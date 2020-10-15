@@ -55,7 +55,7 @@ def Traslate(vertices, tx, ty):
 		result.append(point)
 	return result
 
-def Defender(x, y, r, g, b, size):
+def warrior_main(x, y, r, g, b, size):
 	matrix = [
 		[0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0],
 		[0,0,0,0,1,1,2,2,1,0,0,0,0,0,0,0,0,0,0,1,2,2,1,1,0,0,0,0,0,0,0,0],
@@ -126,3 +126,4 @@ def display_openGL(width, height, scale):
 	# glScalef(scale, scale, 0)
 
 	gluOrtho2D(-1 * width / 2, width / 2, -1 * height / 2, height / 2)
+
