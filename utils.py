@@ -54,7 +54,7 @@ def Traslate(vertices, tx, ty):
 		point = np.dot(T, item)
 		result.append(point)
 	return result
-
+#Modulo del soldadito
 def warrior_main(x, y, r, g, b, size):
 	matrix = [
 		[0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0],
