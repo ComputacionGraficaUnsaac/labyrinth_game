@@ -32,11 +32,10 @@ def set_pixel(x, y, r, g, b, size):
 	# pygame.display.flip()
 	
 	# option 2
-	# glFlush()
+	glFlush()
 
 def color_pixel(width, height, x, y, size):
-	rgb = glReadPixels(width / 2 + x , height / 2 + y, size ,size , 
-						GL_RGB, GL_UNSIGNED_BYTE, None)
+	rgb = glReadPixels(width / 2 + x , height / 2 + y, size ,size , GL_RGB, GL_UNSIGNED_BYTE, None)
 	return list(rgb)
 
 def clearCanvas():
@@ -47,6 +46,18 @@ def Traslate(vertices, tx, ty):
 	T = [
 		[1, 0, tx], 
 		[0, 1, ty], 
+		[0, 0, 1]
+	]
+	result = []
+	for item in vertices:
+		point = np.dot(T, item)
+		result.append(point)
+	return result
+
+def Scale(vertices, sx, sy):
+	T = [
+		[sx, 0, 0], 
+		[0, sy, 0], 
 		[0, 0, 1]
 	]
 	result = []
@@ -99,22 +110,38 @@ def warrior_main(x, y, r, g, b, size):
 			if matrix[i][j] == 2:
 				set_pixel(y - j, x - i,255/255, 192/255, 5/255, size)
 			#Color del arma
-			# if matrix[i][j] == 3:
-			# 	set_pixel(y - j, x - i,244, 244, 244, size)
-			# # Color Armadura
-			# if matrix[i][j] == 4:
-			# 	set_pixel(y - j, x - i,10/255, 10/255 , 10/255, size)
-			# # color peto			
-			# if matrix[i][j] == 5:
-			# 	set_pixel(y - j, x - i,255/255, 255/255 , 0/255, size)
+			if matrix[i][j] == 3:
+				set_pixel(y - j, x - i,244/255, 244/255, 244/255, size)
+			# Color Armadura
+			if matrix[i][j] == 4:
+				set_pixel(y - j, x - i,10/255, 10/255 , 10/255, size)
+			# color peto			
+			if matrix[i][j] == 5:
+				set_pixel(y - j, x - i,255/255, 255/255 , 0/255, size)
 
-def MoveDefender(x, y, sx, sy, r, g, b, size):
-	clearCanvas()
+def borrarAnterior(x, y, sx, sy, r, g, b, size):
 	vertices = Traslate([[x, y, 1]], sx, sy)
+	# vertices = Scale([[x, y, 1]], 2, 2)
 	x = vertices[0][0]
 	y = vertices[0][1]
-	Defender(y, -x, r, g, 1, size)
+	# warrior_main(y, -x, 0, 0, 0, size)
+	warrior_main(y, -x, r, g, 1, size)
 	pygame.display.flip()
+	
+	return x, y
+
+
+def MoveDefender(x, y, sx, sy, r, g, b, size):
+	clearCanvas()	
+	# borrarAnterior(xa, ya, sx, sy, 0, 0, 0, size)
+	vertices = Traslate([[x, y, 1]], sx, sy)
+	
+	x = vertices[0][0]
+	y = vertices[0][1]
+	# warrior_main(y, -x, 0, 0, 0, size)
+	warrior_main(y, -x, r, g, 1, size)
+	pygame.display.flip()
+	
 	return x, y
 
 ### Draw

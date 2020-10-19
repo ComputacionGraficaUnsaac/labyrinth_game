@@ -43,24 +43,24 @@ def main():
 		if event.type == pygame.KEYDOWN:
 			if event.key == pygame.K_LEFT :
 				print("K_LEFT")
-				sx = 0.2
+				sx = 5
 				sy = 0
 				x, y = MoveDefender(x, y, sx, sy,59/255, 131/255, 189/255, scale)
 			elif event.key == pygame.K_RIGHT:
 				print("K_RIGHT")
-				sx = -0.2
+				sx = -5
 				sy = 0
 				x, y = MoveDefender(x, y, sx, sy, 59/255, 131/255, 189/255, scale)
 			elif event.key == pygame.K_UP :
 				print("K_UP")
 				sx = 0
-				sy = 0.2
-				x, y = MoveDefender(x, y, sx, sy,59/255, 131/255, 189/255, scale)
-				set_pixel(50, 50, 255/255, 255/255, 255/255, 3)
+				sy = 5
+				x, y = MoveDefender(x, y , sx, sy,59/255, 131/255, 189/255, scale)
+				# set_pixel(50, 50, 255/255, 255/255, 255/255, 3)
 			elif event.key == pygame.K_DOWN :
 				print("K_DOWN")
 				sx = 0
-				sy = -0.2
+				sy = -5
 				x, y = MoveDefender(x, y, sx, sy, 59/255, 131/255, 189/255, scale)
 				
 if __name__ == '__main__':
