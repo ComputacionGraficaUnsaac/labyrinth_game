@@ -27,6 +27,7 @@ def main():
 
 	x, y = 0, 0
 	x, y = MoveDefender(x, y, 0, 0, 59/255, 131/255, 189/255, scale)
+	
 
 	print("Finish...")
 	glFlush()
