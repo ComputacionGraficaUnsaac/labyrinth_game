@@ -30,7 +30,7 @@ def main():
 	display_openGL(width, height, scale)
 
 	x, y = 0, 0
-	pintar('main',pj.warrior_main1(),0,0)	
+	pintar('main',pj.warrior_main2(),0,0)	
 
 	while True:
 		for event in pygame.event.get():
@@ -40,31 +40,31 @@ def main():
 		if event.type == pygame.KEYDOWN:
 			if event.key == pygame.K_LEFT :
 				print("K_LEFT")
-				despintar('main',pj.warrior_main1(),x,y)
+				despintar('main',pj.warrior_main2(),x,y)
 				x += 0
 				y += -5				
-				pintar('main',pj.warrior_main1(),x,y)
+				pintar('main',pj.warrior_main2(),x,y)
 			elif event.key == pygame.K_RIGHT:
 				print("K_RIGHT")
-				despintar('main',pj.warrior_main1(),x,y)
+				despintar('main',pj.warrior_main2(),x,y)
 				x += 0
 				y += 5
 				# x, y = MoveDefender(x, y, sx, sy, 59/255, 131/255, 189/255, scale)
-				pintar('main',pj.warrior_main1(),x,y)
+				pintar('main',pj.warrior_main2(),x,y)
 			elif event.key == pygame.K_UP :
 				print("K_UP")
-				despintar('main',pj.warrior_main1(),x,y)
+				despintar('main',pj.warrior_main2(),x,y)
 				x += 5
 				y += 0
-				pintar('main',pj.warrior_main1(),x,y)
+				pintar('main',pj.warrior_main2(),x,y)
 				# x, y = MoveDefender(x, y , sx, sy,59/255, 131/255, 189/255, scale)
 				# set_pixel(50, 50, 255/255, 255/255, 255/255, 3)
 			elif event.key == pygame.K_DOWN :
 				print("K_DOWN")
-				despintar('main',pj.warrior_main1(),x,y)
+				despintar('main',pj.warrior_main2(),x,y)
 				x += -5
 				y += 0
-				pintar('main',pj.warrior_main1(),x,y)
+				pintar('main',pj.warrior_main2(),x,y)
 				# x, y = MoveDefender(x, y, sx, sy, 59/255, 131/255, 189/255, scale)
 		glFlush()
 if __name__ == '__main__':
