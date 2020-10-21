@@ -32,6 +32,7 @@ def main():
 	x, y = 0, 0
 	pintar('main',pj.warrior_main2(),0,0)	
 	pintar('princesa',pj.princesa(),150,150)
+	pintar('piso_one',pj.piso_one(),100,100)
 	while True:
 		for event in pygame.event.get():
 			if event.type == QUIT:

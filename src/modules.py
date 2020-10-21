@@ -79,6 +79,26 @@ def pintar(str,matrix,x,y):
 				if matrix[i][j] == 5:
 					set_pixel((y - j)*size, (x - i)*size,255/255, 255/255 , 0/255, size)
 	
+	if(str == 'piso_one'):
+		r,g,b = 0, 0, 0
+		color1 = ()
+		color_0=(55/255, 67/255, 100/255)
+		color_1=(142/255, 158/255, 183/255)
+		color_2=(93/255, 106/255, 140/255)
+		
+		for i in range(len(matrix)):
+			for j in range(len(matrix[0])):
+				
+				#Color fondo
+				if matrix[i][j] == 0:
+					set_pixel((y - j)*size, (x - i)*size,color_0[0], color_0[1], color_0[2], size)
+				#Color bloques
+				if matrix[i][j] == 1:
+					set_pixel((y - j)*size, (x - i)*size,color_1[0], color_1[1],color_1[2], size)
+				# # Color sobras de bloques
+				if matrix[i][j] == 2:
+					set_pixel((y - j)*size, (x - i)*size,color_2[0], color_2[1],color_2[2], size)
+				
 
 def despintar(str,matrix,x,y):
 	size = 2
