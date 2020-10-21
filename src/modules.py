@@ -56,7 +56,7 @@ def pintar(str,matrix,x,y):
 				# # Color Armadura
 				if matrix[i][j] == 4:
 					set_pixel((y - j)*size, (x - i)*size,24/255, 117/255 , 117/255, size)
-				# # color peto			
+				# # color pecho			
 				if matrix[i][j] == 5:
 					set_pixel((y - j)*size, (x - i)*size,255/255, 157/255 , 0/255, size)
 	
