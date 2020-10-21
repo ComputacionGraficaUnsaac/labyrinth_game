@@ -31,7 +31,7 @@ def main():
 
 	x, y = 0, 0
 	pintar('main',pj.warrior_main2(),0,0)	
-
+	pintar('princesa',pj.princesa(),150,150)
 	while True:
 		for event in pygame.event.get():
 			if event.type == QUIT:
@@ -65,7 +65,7 @@ def main():
 				x += -5
 				y += 0
 				pintar('main',pj.warrior_main2(),x,y)
-				pintar('princesa',pj.princesa(),x,y)
+				# pintar('princesa',pj.princesa(),x,y)
 				# x, y = MoveDefender(x, y, sx, sy, 59/255, 131/255, 189/255, scale)
 		glFlush()
 if __name__ == '__main__':

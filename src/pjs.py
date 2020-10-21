@@ -255,5 +255,3 @@ def muerte(x, y, r, g, b, size):
 	]
 
 
-
-
