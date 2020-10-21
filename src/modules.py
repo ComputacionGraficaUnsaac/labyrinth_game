@@ -88,8 +88,5 @@ def despintar(str,matrix,x,y):
 			for j in range(len(matrix[0])):
 				set_pixel((y - j)*size, (x - i)*size, r, g, b, size)
 
-<<<<<<< HEAD
 # esto generar un conflicto
-=======
 #Prueba de fallo
->>>>>>> 2dd6d8205e5cfa89da7cd37e8f9157f77a24241e
