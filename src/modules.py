@@ -39,46 +39,45 @@ def display_openGL(width, height, scale):
 def pintar(str,matrix,x,y):	
 	size = 2
 	if(str == 'main'):
-		r,g,b = 0, 0, 0
-		color1 = ()
-		war_orange = (255/255,154/255,77/255)
-		# orange2
-		for i in range(len(matrix)):
-			for j in range(len(matrix[0])):
-				if matrix[i][j] == 1:
-					set_pixel((y - j)*size, (x - i)*size, r, g, b, size)
-				#Color cuernos
-				if matrix[i][j] == 2:
-					set_pixel((y - j)*size, (x - i)*size,war_orange[0], war_orange[1], war_orange[2], size)
-				#Color del arma
-				if matrix[i][j] == 3:
-					set_pixel((y - j)*size, (x - i)*size,0/255, 190/255, 244, size)
-				# # Color Armadura
-				if matrix[i][j] == 4:
-					set_pixel((y - j)*size, (x - i)*size,24/255, 117/255 , 117/255, size)
-				# # color pecho			
-				if matrix[i][j] == 5:
-					set_pixel((y - j)*size, (x - i)*size,255/255, 157/255 , 0/255, size)
-	
+		size = 3
+		color1 = (0/255,0/255,0/255)		 # color negro borde
+		color2 = (255/255,154/255,77/255)# color naranja cuernos
+		color3 = (0/255,190/255,244/255) # color arma
+		color4 = (24/255,117/255,117/255)# color armadura
+		color5 = (255/255,157/255,0/255) # color pecho
+
 	if(str == 'princesa'):
-		r ,g ,b = 0, 0, 0
-		for i in range(len(matrix)):
-			for j in range(len(matrix[0])):
-				if matrix[i][j] == 1:
-					set_pixel((y - j)*size, (x - i)*size, r, g, b, size)
-				#Color cuernos
-				if matrix[i][j] == 2:
-					set_pixel((y - j)*size, (x - i)*size,255/255, 192/255, 5/255, size)
-				#Color del arma
-				if matrix[i][j] == 3:
-					set_pixel((y - j)*size, (x - i)*size,244, 244, 244, size)
-				# # Color Armadura
-				if matrix[i][j] == 4:
-					set_pixel((y - j)*size, (x - i)*size,10/255, 10/255 , 10/255, size)
-				# # color peto			
-				if matrix[i][j] == 5:
-					set_pixel((y - j)*size, (x - i)*size,255/255, 255/255 , 0/255, size)
+		size = 2
+		color1 = (0/255,0/255,0/255)
+		color2 = (255/255,192/255,5/255)
+		color3 = (244/255,244/255,244/255)
+		color4 = (10/255,10/255,10/255)
+		color5 = (255/255,157/255,0/255)
 	
+	if(str == 'piso1'):		
+		size = 2
+		color1 = (55/255, 67/255, 100/255)  # color fondo
+		color2 = (142/255, 158/255, 183/255)# color bloques
+		color3 = (93/255, 106/255, 140/255) # color sobras de bloques
+
+
+	for i in range(len(matrix)):
+		for j in range(len(matrix[0])):
+			if matrix[i][j] == 1:
+				set_pixel((y - j)*size, (x - i)*size, color1[0], color1[1], color1[2], size)
+			
+			if matrix[i][j] == 2:
+				set_pixel((y - j)*size, (x - i)*size, color2[0], color2[1], color2[2], size)
+			
+			if matrix[i][j] == 3:
+				set_pixel((y - j)*size, (x - i)*size, color3[0], color3[1], color3[2], size)
+			
+			if matrix[i][j] == 4:
+				set_pixel((y - j)*size, (x - i)*size, color4[0], color4[1], color4[2], size)
+			
+			if matrix[i][j] == 5:
+				set_pixel((y - j)*size, (x - i)*size, color5[0], color5[1], color5[2], size)				
+
 
 def despintar(str,matrix,x,y):
 	size = 2
@@ -86,8 +85,6 @@ def despintar(str,matrix,x,y):
 		r,g,b = 1, 1, 1
 		for i in range(len(matrix)):
 			for j in range(len(matrix[0])):
-				set_pixel((y - j)*size, (x - i)*size, r, g, b, size)
+				if(matrix[i][j] != 0):
+					set_pixel((y - j)*size, (x - i)*size, r, g, b, size)
 
-# esto generar un conflicto
-#Prueba de fallo
-# esto lo escribo yo (widmaro) y generara algun conflicto
