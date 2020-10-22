@@ -41,10 +41,10 @@ def pintar(str,matrix,x,y):
 	if(str == 'main'):
 		size = 3
 		color1 = (0/255,0/255,0/255)		 # color negro borde
-		color2 = (255/255,154/255,77/255)# color naranja cuernos
-		color3 = (0/255,190/255,244/255) # color arma
-		color4 = (24/255,117/255,117/255)# color armadura
-		color5 = (255/255,157/255,0/255) # color pecho
+		color2 = (252/255, 160/255, 68/255)# color naranja cuernos
+		color3 = (60/255, 188/255, 252/255) # color celeste arma
+		color4 = (0/255, 136/255, 136/255)# color armadura
+		color5 = (252/255, 252/255 , 252/255) # color blanco
 
 	if(str == 'princesa'):
 		size = 2
@@ -83,7 +83,8 @@ def pintar(str,matrix,x,y):
 				set_pixel((y - j)*size, (x - i)*size, color4[0], color4[1], color4[2], size)
 			
 			if matrix[i][j] == 5:
-				set_pixel((y - j)*size, (x - i)*size, color5[0], color5[1], color5[2], size)				
+				set_pixel((y - j)*size, (x - i)*size, color5[0], color5[1], color5[2], size)
+						
 
 
 def despintar(str,matrix,x,y):

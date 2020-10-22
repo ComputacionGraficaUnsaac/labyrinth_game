@@ -55,7 +55,7 @@ def main():
 		for j in range(-400,400,26):
 			pintar('piso1',pj.piso1(),i,j)
 
-	pintar('main',pj.warrior_main2(),0,0)	
+	pintar('main',pj.warrior_main2(),0,0)	 
 	pintar('princesa',pj.princesa(),150,150)
 	f = 0
 	while True:
