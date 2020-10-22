@@ -60,6 +60,13 @@ def pintar(str,matrix,x,y):
 		color2 = (142/255, 158/255, 183/255)# color bloques
 		color3 = (93/255, 106/255, 140/255) # color sobras de bloques
 
+	if(str == 'Pared1'):		
+		size = 2
+		colo0=(140/255, 156/255, 179/255)# colo Marco claro
+		color1 =(193/255, 203/255, 224/255)  # color ladrillo
+		color2 = (47/255, 60/255, 87/255)# Color separacion de bloques
+		color3 = (91/255, 106/255, 133/255) # color Marco oscuro
+
 
 	for i in range(len(matrix)):
 		for j in range(len(matrix[0])):
