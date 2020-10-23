@@ -37,9 +37,9 @@ def display_openGL(width, height, scale):
 	gluOrtho2D(-1 * width / 2, width / 2, -1 * height / 2, height / 2)
 
 def pintar(str,matrix,x,y):	
-	size = 2
+	size = 2	
 	if(str == 'main'):
-		size = 3
+		size = 4
 		color1 = (0/255,0/255,0/255)		 # color negro borde
 		color2 = (252/255, 160/255, 68/255)# color naranja cuernos
 		color3 = (60/255, 188/255, 252/255) # color celeste arma
@@ -88,7 +88,7 @@ def pintar(str,matrix,x,y):
 
 
 def despintar(str,matrix,x,y):
-	size = 2
+	size = 4
 	if(str == 'main'):
 		r,g,b = 1, 1, 1
 		for i in range(len(matrix)):
