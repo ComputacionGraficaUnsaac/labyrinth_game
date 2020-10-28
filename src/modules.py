@@ -62,7 +62,7 @@ def pintar(str,matrix,x,y):
 		color4 = (0/255, 136/255, 136/255)# color armadura
 		color5 = (252/255, 252/255 , 252/255) # color blanco
 
-	if(str == 'Pared1'):		
+	if(str == 'pared1'):		
 		size = 2
 		color1=(140/255, 156/255, 179/255)# colo Marco claro
 		color2 =(193/255, 203/255, 224/255)  # color ladrillo

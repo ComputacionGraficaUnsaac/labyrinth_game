@@ -20,6 +20,14 @@ import pjs as pj
 
 from modules import *
 ### Algorithm ###
+def ParedHorizontal(x,y,m):
+	for j in range(y,m,26):
+		pintar('pared1',pj.pared1(),x,j)
+  
+def ParedVertical(x,y,m):
+	for j in range(y,m,26):
+		pintar('pared1',pj.pared1(),j,x)
+
 
 def fondo(xa,ya):
 	pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26)-2)*26)
@@ -38,20 +46,20 @@ def fondo(xa,ya):
 	pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)+2)*26)
 	pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26)+2)*26)
 
-# def atacar_iz(x,y,xa,ya,f):
-# 	despintar()
-# 	M = pj.warrior_main6()
-# 	time.sleep(0.5)
-# 	pintar('main',M,x,y)
-# 	time.sleep(1)
-# 	despintar('main',M,x,y)
-# 	M = pj.warrior_main1()
-# 	pintar('main',M,x,y+2)
-# 	# M = pj.warrior_main5()
-# 	# pintar('main',M,x,y)
-# 	# despintar('main',M,x,y)
-# 	# M = pj.warrior_main1()
-# 	# pintar('main',M,x,y)
+def atacar_iz(x,y,xa,ya,f):
+	# despintar()
+	M = pj.warrior_main6()
+	time.sleep(0.5)
+	pintar('main',M,x,y)
+	time.sleep(1)
+	despintar('main',M,x,y)
+	M = pj.warrior_main1()
+	pintar('main',M,x,y+2)
+	# M = pj.warrior_main5()
+	# pintar('main',M,x,y)
+	# despintar('main',M,x,y)
+	# M = pj.warrior_main1()
+	# pintar('main',M,x,y)
 
 def moveWarrior_der(x,y,xa,ya,f):
 	if(f % 6 == 0):		
@@ -125,6 +133,20 @@ def moveWarrior_iz(x,y,xa,ya,f):
 	pintar('main',M,x,y)
 	f += 1
 
+def pintar_laberinto():
+	#Pintar paredes
+	ParedHorizontal(183,-240,345)
+	ParedHorizontal(-152,-278,280)
+	ParedVertical(-298,-210,230)
+	ParedVertical(322,-100,230)
+	ParedHorizontal(-10,0,10)
+	#Piedras
+	ParedHorizontal(-10,-100,-90)
+	ParedHorizontal(-10,-200,-190)
+	ParedHorizontal(100,-200,-190)
+	ParedHorizontal(100,-100,-90)
+	ParedHorizontal(100,0,10)
+
 def main():
 	scale = 2
 	# width, height = scale * 300, scale * 300
@@ -141,13 +163,9 @@ def main():
 			pintar('piso1',pj.piso1(),i,-j)
 			pintar('piso1',pj.piso1(),-i,j)
 
-	j = 0
-	for i in range(0,350,26):
-		pintar('Pared1',pj.Pared1(),j,i)
-		pintar('Pared1',pj.Pared1(),-j,i)
-
 	pintar('main',pj.warrior_main5(),0,125)	 
 	pintar('princesa',pj.princesa(),150,150)
+	pintar_laberinto()
 	f = 0
 	iz = True
 	while True:
