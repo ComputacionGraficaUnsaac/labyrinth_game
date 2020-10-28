@@ -21,7 +21,8 @@ import pjs as pj
 from modules import *
 ### Algorithm ###
 
-def moveWarrior(x,y,xa,ya,f):
+def moveWarrior(x,y,xa,ya,f):	
+
 	if(f % 6 == 0):
 		M = pj.warrior_main1()
 		P = pj.warrior_main6()
@@ -45,6 +46,12 @@ def moveWarrior(x,y,xa,ya,f):
 	# y += -5			
 	# pintar('piso1',pj.piso1(),x,y)	
 	despintar('main',P,xa,ya)
+	pintar('piso1',pj.piso1(),int(xa/25)*25,int(ya/26)*26)
+	pintar('piso1',pj.piso1(),int(xa/25)*25,int(int(ya/26)+1)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(ya/26)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)+1)*26)
+	
+	# pintar('piso1',pj.piso1(),x,y)
 	pintar('main',M,x,y)
 	f += 1
 
@@ -60,6 +67,10 @@ def main():
 	for i in range(-350,350,25):
 		for j in range(-400,400,26):
 			pintar('piso1',pj.piso1(),i,j)
+
+	j = 100
+	for i in range(-350,350,26):
+		pintar('Pared1',pj.Pared1(),j,i)
 
 	pintar('main',pj.warrior_main5(),0,125)	 
 	pintar('princesa',pj.princesa(),150,150)

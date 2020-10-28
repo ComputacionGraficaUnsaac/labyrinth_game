@@ -39,7 +39,7 @@ def display_openGL(width, height, scale):
 def pintar(str,matrix,x,y):	
 	size = 2	
 	if(str == 'main'):
-		size = 5
+		size = 2
 		color1 = (0/255,0/255,0/255)		 # color negro borde
 		color2 = (252/255, 160/255, 68/255)# color naranja cuernos
 		color3 = (60/255, 188/255, 252/255) # color celeste arma
@@ -59,13 +59,16 @@ def pintar(str,matrix,x,y):
 		color1 = (55/255, 67/255, 100/255)  # color fondo
 		color2 = (142/255, 158/255, 183/255)# color bloques
 		color3 = (93/255, 106/255, 140/255) # color sobras de bloques
+		color4 = (0/255, 136/255, 136/255)# color armadura
+		color5 = (252/255, 252/255 , 252/255) # color blanco
 
 	if(str == 'Pared1'):		
 		size = 2
-		colo0=(140/255, 156/255, 179/255)# colo Marco claro
-		color1 =(193/255, 203/255, 224/255)  # color ladrillo
-		color2 = (47/255, 60/255, 87/255)# Color separacion de bloques
-		color3 = (91/255, 106/255, 133/255) # color Marco oscuro
+		color1=(140/255, 156/255, 179/255)# colo Marco claro
+		color2 =(193/255, 203/255, 224/255)  # color ladrillo
+		color3 = (47/255, 60/255, 87/255)# Color separacion de bloques
+		color4 = (91/255, 106/255, 133/255) # color Marco oscuro
+		color5 = (0/255, 136/255, 136/255)# color armadura		
 
 
 	for i in range(len(matrix)):
@@ -88,7 +91,7 @@ def pintar(str,matrix,x,y):
 
 
 def despintar(str,matrix,x,y):
-	size = 5
+	size = 2
 	if(str == 'main'):
 		r,g,b = 1, 1, 1
 		for i in range(len(matrix)):
