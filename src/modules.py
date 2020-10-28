@@ -36,6 +36,42 @@ def display_openGL(width, height, scale):
 
 	gluOrtho2D(-1 * width / 2, width / 2, -1 * height / 2, height / 2)
 
+def Traslate(vertices, tx, ty):
+	T = [
+		[1, 0, tx], 
+		[0, 1, ty], 
+		[0, 0, 1]
+	]
+	result = []
+	for item in vertices:
+		point = np.dot(T, item)
+		result.append(point)
+	return result
+
+def ReflexionX(vertices):
+	T = [
+		[-1, 0, 0], 
+		[0, 1, 0], 
+		[0, 0, 1]
+	]
+	result = []
+	for item in vertices:
+		point = np.dot(T, item)
+		result.append(point)
+	return result
+
+def ReflexionY(vertices):
+	T = [
+		[1, 0, 0], 
+		[0,-1, 0], 
+		[0, 0, 1]
+	]
+	result = []
+	for item in vertices:
+		point = np.dot(T, item)
+		result.append(point)
+	return result
+
 def pintar(str,matrix,x,y):	
 	size = 2	
 	if(str == 'main'):
@@ -62,13 +98,31 @@ def pintar(str,matrix,x,y):
 		color4 = (0/255, 136/255, 136/255)# color armadura
 		color5 = (252/255, 252/255 , 252/255) # color blanco
 
+	if(str == 'muerte'):		
+		size = 2
+		color1=(0/255, 0/255, 0/255)# colo Marco claro
+		color2 =(193/255, 80/255, 60/255)  # color ladrillo
+		color3 = (47/255, 60/255, 87/255)# Color separacion de bloques
+		color4 = (91/255, 106/255, 133/255) # color Marco oscuro
+		color5 = (0/255, 136/255, 136/255)# color armadura		
+	
 	if(str == 'pared1'):		
 		size = 2
 		color1=(140/255, 156/255, 179/255)# colo Marco claro
 		color2 =(193/255, 203/255, 224/255)  # color ladrillo
 		color3 = (47/255, 60/255, 87/255)# Color separacion de bloques
 		color4 = (91/255, 106/255, 133/255) # color Marco oscuro
-		color5 = (0/255, 136/255, 136/255)# color armadura		
+		color5 = (0/255, 136/255, 136/255)# color armadura	
+
+	if(str == 'soldado1'):		
+		size = 2
+		color1 = (0/255,0/255,0/255)# colo Marco claro
+		color2 =(193/255, 203/255, 224/255)  # color ladrillo
+		color3 = (78/255, 59/255, 49/255)# Color separacion de bloques
+		color4 = (255/255, 0/255, 0/255) # color de capa y
+		color5 = (156/255, 156/255, 156/255)# color armadura
+	
+	
 
 
 	for i in range(len(matrix)):
