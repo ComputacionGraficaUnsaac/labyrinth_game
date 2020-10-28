@@ -16,6 +16,9 @@
 
 - Realizar un juego basico usando funciones aprendidas en el curso de computacion grafica.
 
+## Descripcion
+-El juego consiste en la aventura  de un guerrero para poder rescatar a su princesa que lo dejo por otro, pero el insiste en rescatarla, el aventurero guerrero recorrerá muchos obstáculo uno de ellos es "la muerte "que estará rondando por cada rincón del mapa para obstruir toda hazaña del guerrero, una vez derrotado "la muerte"  el guerrero tendrá una dificultad mayor el de luchar contra un guerreo en forma de humano pero alma de demonio, el guerrero tendrá que usar su astucia para poder llegar a la princesa, podrá nuestro aventurero guerrero salvar a la princesa? Acompáñame a ver este maravilloso juego, a jugar!
+
 #### Autores:✒️
 
 - **Widmar Raul Quispe Leon** - _GitHub Account_ - [WidmarO](https://github.com/WidmarO)
