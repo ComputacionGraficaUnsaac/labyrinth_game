@@ -39,7 +39,7 @@ def display_openGL(width, height, scale):
 def pintar(str,matrix,x,y):	
 	size = 2	
 	if(str == 'main'):
-		size = 4
+		size = 5
 		color1 = (0/255,0/255,0/255)		 # color negro borde
 		color2 = (252/255, 160/255, 68/255)# color naranja cuernos
 		color3 = (60/255, 188/255, 252/255) # color celeste arma
@@ -88,7 +88,7 @@ def pintar(str,matrix,x,y):
 
 
 def despintar(str,matrix,x,y):
-	size = 4
+	size = 5
 	if(str == 'main'):
 		r,g,b = 1, 1, 1
 		for i in range(len(matrix)):

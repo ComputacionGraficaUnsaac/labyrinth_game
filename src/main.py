@@ -22,21 +22,24 @@ from modules import *
 ### Algorithm ###
 
 def moveWarrior(x,y,xa,ya,f):
-	if(f % 5 == 0):
+	if(f % 6 == 0):
 		M = pj.warrior_main1()
-		P = pj.warrior_main5()
-	if(f % 5 == 1):
+		P = pj.warrior_main6()
+	if(f % 6 == 1):
 		M = pj.warrior_main2()
 		P = pj.warrior_main1()
-	if(f % 5 == 2):
+	if(f % 6 == 2):
 		M = pj.warrior_main3()
 		P = pj.warrior_main2()
-	if(f % 5 == 3):
+	if(f % 6 == 3):
 		M = pj.warrior_main4()
 		P = pj.warrior_main3()
-	if(f % 5 == 4):
+	if(f % 6 == 4):
 		M = pj.warrior_main5()
 		P = pj.warrior_main4()
+	if(f % 6 == 5):
+		M = pj.warrior_main6()
+		P = pj.warrior_main5()
 
 	# x += 0
 	# y += -5			
@@ -53,12 +56,12 @@ def main():
 	# pygame.display.set_caption('C.G. I')
 	display_openGL(width, height, scale)
 
-	x, y = 0, 0
+	x, y = 0, 125
 	for i in range(-350,350,25):
 		for j in range(-400,400,26):
 			pintar('piso1',pj.piso1(),i,j)
 
-	pintar('main',pj.warrior_main5(),0,0)	 
+	pintar('main',pj.warrior_main5(),0,125)	 
 	pintar('princesa',pj.princesa(),150,150)
 	f = 0
 	while True:
