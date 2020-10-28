@@ -20,6 +20,15 @@ import pjs as pj
 
 from modules import *
 ### Algorithm ###
+def ParedHorizontal(x,y,m):
+	for j in range(y,m,26):
+		pintar('Adobe1',pj.Adobe1(),x,j)
+  
+def ParedVertical(x,y,m):
+	for j in range(y,m,26):
+		pintar('Adobe1',pj.Adobe1(),j,x)
+
+
 
 def moveWarrior(x,y,xa,ya,f):	
 
@@ -71,6 +80,21 @@ def main():
 	j = 100
 	for i in range(-350,350,26):
 		pintar('Pared1',pj.Pared1(),j,i)
+	
+	#Pintar paredes
+		pintar('main',pj.warrior_main2(),180,-280)	
+	pintar('princesa',pj.princesa(),150,150)
+	ParedHorizontal(176,-240,73)
+	ParedHorizontal(-96,-278,33)
+	ParedVertical(-300,-210,350)
+	ParedVertical(89,-100,230)
+	ParedHorizontal(-10,0,10)
+	#Piedras
+	ParedHorizontal(-10,-100,-90)
+	ParedHorizontal(-10,-200,-190)
+	ParedHorizontal(100,-200,-190)
+	ParedHorizontal(100,-100,-90)
+	ParedHorizontal(100,0,10)
 
 	pintar('main',pj.warrior_main5(),0,125)	 
 	pintar('princesa',pj.princesa(),150,150)
