@@ -21,7 +21,80 @@ import pjs as pj
 from modules import *
 ### Algorithm ###
 
-def moveWarrior(x,y,xa,ya,f):	
+def fondo(xa,ya):
+	pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26)-2)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)-2)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26)-2)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26)-1)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)-1)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26)-1)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26))*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26))*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26))*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26)+1)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)+1)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26)+1)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26)+2)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)+2)*26)
+	pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26)+2)*26)
+
+# def atacar_iz(x,y,xa,ya,f):
+# 	despintar()
+# 	M = pj.warrior_main6()
+# 	time.sleep(0.5)
+# 	pintar('main',M,x,y)
+# 	time.sleep(1)
+# 	despintar('main',M,x,y)
+# 	M = pj.warrior_main1()
+# 	pintar('main',M,x,y+2)
+# 	# M = pj.warrior_main5()
+# 	# pintar('main',M,x,y)
+# 	# despintar('main',M,x,y)
+# 	# M = pj.warrior_main1()
+# 	# pintar('main',M,x,y)
+
+def moveWarrior_der(x,y,xa,ya,f):
+	if(f % 6 == 0):		
+		M = pj.r_warrior_main1()
+		P = pj.r_warrior_main6()
+	if(f % 6 == 1):
+		M = pj.r_warrior_main2()
+		P = pj.r_warrior_main1()
+	if(f % 6 == 2):
+		M = pj.r_warrior_main3()
+		P = pj.r_warrior_main2()
+	if(f % 6 == 3):
+		M = pj.r_warrior_main4()
+		P = pj.r_warrior_main3()
+	if(f % 6 == 4):
+		M = pj.r_warrior_main5()
+		P = pj.r_warrior_main4()
+	if(f % 6 == 5):
+		M = pj.r_warrior_main6()
+		P = pj.r_warrior_main5()
+
+	despintar('main',P,xa,ya)
+	fondo(xa,ya)
+	# pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26)-2)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)-2)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26)-2)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26)-1)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)-1)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26)-1)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26))*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26))*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26))*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26)+1)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)+1)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26)+1)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25))*25,int(int(ya/26)+2)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)+2)*26)
+	# pintar('piso1',pj.piso1(),int(int(xa/25)-1)*25,int(int(ya/26)+2)*26)
+	
+	# pintar('piso1',pj.piso1(),x,y)
+	pintar('main',M,x,y)
+
+def moveWarrior_iz(x,y,xa,ya,f):	
 
 	if(f % 6 == 0):
 		M = pj.warrior_main1()
@@ -46,10 +119,7 @@ def moveWarrior(x,y,xa,ya,f):
 	# y += -5			
 	# pintar('piso1',pj.piso1(),x,y)	
 	despintar('main',P,xa,ya)
-	pintar('piso1',pj.piso1(),int(xa/25)*25,int(ya/26)*26)
-	pintar('piso1',pj.piso1(),int(xa/25)*25,int(int(ya/26)+1)*26)
-	pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(ya/26)*26)
-	pintar('piso1',pj.piso1(),int(int(xa/25)+1)*25,int(int(ya/26)+1)*26)
+	fondo(xa,ya)
 	
 	# pintar('piso1',pj.piso1(),x,y)
 	pintar('main',M,x,y)
@@ -64,17 +134,22 @@ def main():
 	display_openGL(width, height, scale)
 
 	x, y = 0, 125
-	for i in range(-350,350,25):
-		for j in range(-400,400,26):
+	for i in range(0,201,25):
+		for j in range(0,339,26):
 			pintar('piso1',pj.piso1(),i,j)
+			pintar('piso1',pj.piso1(),-i,-j)
+			pintar('piso1',pj.piso1(),i,-j)
+			pintar('piso1',pj.piso1(),-i,j)
 
-	j = 100
-	for i in range(-350,350,26):
+	j = 0
+	for i in range(0,350,26):
 		pintar('Pared1',pj.Pared1(),j,i)
+		pintar('Pared1',pj.Pared1(),-j,i)
 
 	pintar('main',pj.warrior_main5(),0,125)	 
 	pintar('princesa',pj.princesa(),150,150)
 	f = 0
+	iz = True
 	while True:
 		for event in pygame.event.get():
 			if event.type == QUIT:
@@ -83,16 +158,19 @@ def main():
 		if event.type == pygame.KEYDOWN:
 			if event.key == pygame.K_LEFT :
 				print("K_LEFT")
-				# despintar('main',pj.warrior_main2(),x,y)
 				xa = x
 				ya = y
 				x += 0
-				y += -2		
-				moveWarrior(x,y,xa,ya,f)
+				y += -2
+				iz = True
+				if (iz):
+					moveWarrior_iz(x,y,xa,ya,f)
+				else:
+					moveWarrior_der(x,y,xa,ya,f)
+
 				time.sleep(0.1)
 				f += 1
-				# pintar('piso1',pj.piso1(),x,y)	
-				# pintar('main',pj.warrior_main2(),x,y)
+
 			elif event.key == pygame.K_RIGHT:
 				print("K_RIGHT")
 				despintar('main',pj.warrior_main2(),x,y)
@@ -100,34 +178,51 @@ def main():
 				ya = y
 				x += 0
 				y += 2
-				moveWarrior(x,y,xa,ya,f)
+				iz = False
+				if (iz):
+					moveWarrior_iz(x,y,xa,ya,f)
+				else:
+					moveWarrior_der(x,y,xa,ya,f)
 				time.sleep(0.1)
 				f += 1
-				# pintar('piso1',pj.piso1(),x,y)
-				# pintar('main',pj.warrior_main2(),x,y)
+
 			elif event.key == pygame.K_UP :
 				print("K_UP")				
 				xa = x
 				ya = y
 				x += 5
-				y += 0
-				moveWarrior(x,y,xa,ya,f)
+				y += 0				
+				if (iz):
+					moveWarrior_iz(x,y,xa,ya,f)
+				else:
+					moveWarrior_der(x,y,xa,ya,f)
 				time.sleep(0.1)
 				f += 1
-				# pintar('piso1',pj.piso1(),x,y)
-				# pintar('main',pj.warrior_main2(),x,y)
+
 			elif event.key == pygame.K_DOWN :
 				print("K_DOWN")
 				xa = x
 				ya = y
 				x += -5
-				y += 0
-				moveWarrior(x,y,xa,ya,f)
+				y += 0				
+				if (iz):
+					moveWarrior_iz(x,y,xa,ya,f)
+				else:
+					moveWarrior_der(x,y,xa,ya,f)
 				time.sleep(0.1)
 				f += 1
 				# pintar('piso1',pj.piso1(),x,y)
 				# pintar('main',pj.warrior_main2(),x,y)
-
+				
+			if event.key == pygame.K_a:
+				print("K_a")
+				xa = x
+				ya = y	
+				x += 0
+				y += -2			
+				atacar_iz(x,y,xa,ya,f)
+				time.sleep(0.1)
+				f += 1
 		glFlush()
 if __name__ == '__main__':
 	main()
