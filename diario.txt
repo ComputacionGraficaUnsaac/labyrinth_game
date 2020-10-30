@@ -1,3 +1,14 @@
 7 Oct:  nota 14 (ver rubricas en tablon)
 14 Oct: tienen el canvas del juego, tiene 1 personaje en codigo, 5/5 contribuciones en el proyecto. nota 15
 23 Oct:  el alcance el juego es grande. Tiene un movimiento en detalle (fluido) el guerrero. (ver GitHub offline) 
+
+28Oct
+casi jugable
+no publicable
+ver github
+
+30Oct
+el link de la hoja de calculo... (Readme) no esta publico
+acento en gráfica 
+el video del juego, screenshots...
+Githubs de los autores
